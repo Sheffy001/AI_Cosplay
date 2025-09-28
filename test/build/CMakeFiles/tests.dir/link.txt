@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/tests.dir/testssl.o -o tests   -L/home/sheffy/CppProject/AIChat/test/build  libhttp.a -lmuduo_net -lmuduo_base -lpthread /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so -lmysqlcppconn 

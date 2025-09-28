@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../lib/libaichat.a CMakeFiles/aichat.dir/AiChatHandler.cpp.o CMakeFiles/aichat.dir/AiChatServer.cpp.o CMakeFiles/aichat.dir/EntryHandler.cpp.o CMakeFiles/aichat.dir/History.cpp.o CMakeFiles/aichat.dir/LoginHandler.cpp.o CMakeFiles/aichat.dir/Loginout.cpp.o CMakeFiles/aichat.dir/RegisterHandler.cpp.o CMakeFiles/aichat.dir/RoleStoryHandler.cpp.o CMakeFiles/aichat.dir/RoleinfoHandler.cpp.o CMakeFiles/aichat.dir/SaveHandle.cpp.o CMakeFiles/aichat.dir/UserInfo.cpp.o
+/usr/bin/ranlib ../../../lib/libaichat.a

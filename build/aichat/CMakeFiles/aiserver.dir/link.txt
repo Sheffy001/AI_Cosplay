@@ -1,0 +1,1 @@
+/usr/bin/c++  -fsanitize=address -g -g -rdynamic CMakeFiles/aiserver.dir/server.cc.o -o ../../bin/aiserver   -L/home/sheffy/CppProject/AIChat/lib  -Wl,-rpath,/home/sheffy/CppProject/AIChat/lib ../../lib/libhttp.a ../../lib/libtools.a ../../lib/libaichat.a ../../lib/libhttp.a -lssl -lcrypto ../../lib/libtools.a -lmysqlcppconn -lmuduo_net -lmuduo_base -lpthread -lmysqlclient 

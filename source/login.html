@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>登录/注册</title>
+</head>
+
+<body>
+  <h2>登录 / 注册</h2>
+  <input type="text" id="username" placeholder="用户名"><br>
+  <input type="password" id="password" placeholder="密码"><br>
+  <button onclick="register()">注册</button>
+  <button onclick="login()">登录</button>
+  <p id="status"></p>
+
+  <script>
+    async function register() {
+      const res = await fetch('/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          username: document.getElementById('username').value,
+          password: document.getElementById('password').value
+        })
+      });
+      const data = await res.json();
+      document.getElementById('status').innerText = data.message;
+    }
+
+    async function login() {
+      const res = await fetch('/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          username: document.getElementById('username').value,
+          password: document.getElementById('password').value
+        })
+      });
+      const data = await res.json();
+      if (data.success) {
+        localStorage.setItem("user", JSON.stringify({
+          userId: data.userId,
+          username: data.username,
+          maxchatid: data.maxchatid
+        }));
+        window.location.href = "/AIchat.html";
+      } else {
+        document.getElementById('status').innerText = data.message;
+      }
+    }
+  </script>
+</body>
+
+</html>

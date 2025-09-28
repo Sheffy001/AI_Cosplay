@@ -1,0 +1,7 @@
+/home/sheffy/CppProject/AIChat/test/build/CMakeFiles/http.dir
+/home/sheffy/CppProject/AIChat/test/build/CMakeFiles/tests.dir
+/home/sheffy/CppProject/AIChat/test/build/CMakeFiles/edit_cache.dir
+/home/sheffy/CppProject/AIChat/test/build/CMakeFiles/rebuild_cache.dir
+/home/sheffy/CppProject/AIChat/test/build/HttpServer/CMakeFiles/http.dir
+/home/sheffy/CppProject/AIChat/test/build/HttpServer/CMakeFiles/edit_cache.dir
+/home/sheffy/CppProject/AIChat/test/build/HttpServer/CMakeFiles/rebuild_cache.dir

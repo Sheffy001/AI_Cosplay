@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhttp.a CMakeFiles/http.dir/CorsMiddleware.o CMakeFiles/http.dir/HttpContext.o CMakeFiles/http.dir/HttpRequest.o CMakeFiles/http.dir/HttpResponse.o CMakeFiles/http.dir/HttpServer.o CMakeFiles/http.dir/MiddlewareChain.o CMakeFiles/http.dir/Router.o CMakeFiles/http.dir/Session.o CMakeFiles/http.dir/SessionManager.o CMakeFiles/http.dir/SessionStorage.o CMakeFiles/http.dir/SslConfig.o CMakeFiles/http.dir/SslConnection.o CMakeFiles/http.dir/SslContext.o
+/usr/bin/ranlib libhttp.a

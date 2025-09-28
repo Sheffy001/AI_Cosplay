@@ -381,7 +381,7 @@
       const roleStory = await getRoleStroy(currentChatId);
       conversationHistory = [{
         role: "system",
-        content: `现在你是下面这个故事的主角，请以主角视角和我聊天：${roleStory}`
+        content: `现在你是下面这个故事的主角，请以主角视角以及像主角一样的语气和说话方式和我聊天：${roleStory}`
       }];
 
       try {

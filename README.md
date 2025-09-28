@@ -9,7 +9,6 @@ AI_Cosplay是一个基于C++和Web技术开发的AI角色扮演聊天应用，�
 - 支持用户注册和登录功能
 - 多种角色选择，满足不同的角色扮演需求
 - 聊天历史记录保存功能
-- 支持HTTPS安全连接
 
 ## 技术栈
 
@@ -166,5 +165,5 @@ cd ../bin
 
 如有任何问题或建议，请通过以下方式联系我们：
 
-- 项目维护者：[xie fei](mailto:xiefeiQQ@qq.com)
+- 项目维护者：[xie fei](mailto:1980278709@qq.com)
 - 项目仓库：[GitHub](https://github.com/Sheffy001/AI_Cosplay#)

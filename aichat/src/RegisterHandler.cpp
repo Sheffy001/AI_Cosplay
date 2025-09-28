@@ -51,7 +51,7 @@ int RegisterHandler::insertUser(const std::string &username, const std::string &
 }
 bool RegisterHandler::UserIsExist(const std::string &username){
     char sql[1024] = {0};
-    sprintf(sql, "select * from users where username = %s", username.c_str());
+    sprintf(sql, "select * from users where username = '%s'", username.c_str());
 
     // std::vector<std::string> params = {username, password};
     MYSQL_RES *res = dbconn->getConnection()->query(sql);

@@ -1,9 +1,9 @@
 #include"AiChatHandler.h"
 
 void AiChatHandler::handle(const HttpRequest& req, HttpResponse* resp){
-    // JSON 解析使用 try catch 捕获异常
+   
    try {
-        // 检查用户是否已登录
+      
         auto session = server_->getSessionManager()->getSession(req, resp);
         if (session->getValue("isLoggedIn") != "true") {
             json errorResp;
@@ -17,7 +17,7 @@ void AiChatHandler::handle(const HttpRequest& req, HttpResponse* resp){
             return;
         }
 
-        // 获取用户信息
+ 
         int userId = std::stoi(session->getValue("userId"));
         std::string username = session->getValue("username");
         int maxchatid = std::stoi(session->getValue("maxchatid"));

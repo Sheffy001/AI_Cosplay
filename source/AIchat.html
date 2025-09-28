@@ -303,7 +303,7 @@
           return null; // 或者 return ""
         }
 
-        return storyData.story;
+        return storyData.roleinfo;
 
       } catch (err) {
         console.error("获取角色故事失败:", err);
@@ -336,15 +336,7 @@
 
 
 
-    // window.onload = () => {
-    //   if (currentUser.username) {
-    //     document.getElementById("username").innerText = "用户: " + currentUser.username;
-    //   }
-    //   if (currentUser.userId && currentUser.maxchatid) {
-    //     document.getElementById("user-info").innerText =
-    //       "UID: " + currentUser.userId + " | maxChatId: " + currentUser.maxchatid;
-    //   }
-    // };
+    
 
 
     // 加载历史聊天
@@ -386,10 +378,10 @@
         }
       }
 
-      const roleStory = await getRoleStroy(chatId) || "默认开场白";
+      const roleStory = await getRoleStroy(currentChatId);
       conversationHistory = [{
         role: "system",
-        content: `你是${roleStory}`
+        content: `现在你是下面这个故事的主角，请以主角视角和我聊天：${roleStory}`
       }];
 
       try {
@@ -409,13 +401,13 @@
           });
         } else {
           // 没有消息，渲染默认开场白
-          const defaultMsg = await getRoleDefaultMessage(chatId) || "默认开场白";
+          const defaultMsg = await getRoleDefaultMessage(currentChatId) || "默认开场白";
           addMessage(defaultMsg, 'assistant');
           conversationHistory.push({ role: 'assistant', content: defaultMsg });
         }
       } catch (err) {
         console.error('加载历史消息失败', err);
-        const defaultMsg = getRoleDefaultMessage(chatId);
+        const defaultMsg = getRoleDefaultMessage(currentChatId);
         addMessage(defaultMsg, 'assistant');
         conversationHistory.push({ role: 'assistant', content: defaultMsg });
       }

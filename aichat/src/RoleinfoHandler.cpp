@@ -31,7 +31,8 @@ void RoleinfoHandler::handle(const HttpRequest &req, HttpResponse *resp)
             std::string roleid = parsed["roleid"];
             json successResp;
             successResp["success"] = true;
-            successResp["roleinfo"] = getInfo(stoi(roleid));
+            std::string opensay = getInfo(stoi(roleid));
+            successResp["roleinfo"] = opensay;
             std::string successBody = successResp.dump(4);
 
             resp->setStatusLine(req.getVersion(), HttpResponse::k200Ok, "OK");
@@ -94,7 +95,6 @@ void RoleinfoHandler::getInfo(vector<json> &info)
             j["roleid"] = row[0] ? row[0] : "";
             j["rolename"] = row[1] ? row[1] : "";
             j["voicetype"] = row[2] ? row[2] : "qiniu_zh_female_tmjxxy";
-            
             info.push_back(j);
         }
         mysql_free_result(res);

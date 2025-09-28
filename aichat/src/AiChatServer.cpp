@@ -34,31 +34,28 @@ void AiChatServer::start()
 
 void AiChatServer::initialize()
 {
-    // 初始化数据库连接池
-    // MysqlUtil::init("tcp://127.0.0.1:3306", "root", "root", "Gomoku", 10);
-    // 初始化会话
     initializeSession();
-    // 初始化中间件
+   
     initializeMiddleware();
-    // 初始化路由
+    
     initializeRouter();
 }
 
 void AiChatServer::initializeSession()
 {
-    // 创建会话存储
+   
     auto sessionStorage = std::make_unique<MemorySessionStorage>();
-    // 创建会话管理器
+
     auto sessionManager = std::make_unique<SessionManager>(std::move(sessionStorage));
-    // 设置会话管理器
+   
     setSessionManager(std::move(sessionManager));
 }
 
 void AiChatServer::initializeMiddleware()
 {
-    // 创建中间件
+    
     auto corsMiddleware = std::make_shared<CorsMiddleware>();
-    // 添加中间件
+    
     httpServer_.addMiddleware(corsMiddleware);
 }
 
